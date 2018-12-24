@@ -6,6 +6,7 @@
 
   <!-- Compiled and minified JavaScript -->
   <link rel="stylesheet" href="main.css" type="text/css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   <style>
@@ -15,12 +16,12 @@
 
 <body>
   <div class="container">
-
+		<button onclick="test()">TEst</button>
     <div class="navigation">
       <input type="checkbox"
       class="navigation-checkbox" id="navigation-checkbox">
       <label for="navigation-checkbox" class="navigation-btn">
-        
+
         <span class="navigation-btn-bar">&nbsp;</span>
       </label>
     </div>
@@ -91,6 +92,13 @@
       </section>
     </main>
   </div>
+				<script>
+							function test()
+							{
+                console.log("something click");
+							  $.get("http://98.142.137.195:5111/api/?message=%E4%BD%A0%E5%A5%BD",function(data){console.log(data);});
+							}
+				</script>
 </body>
 
 </html>
