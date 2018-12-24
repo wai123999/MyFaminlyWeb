@@ -4,11 +4,10 @@
   padding: 0; }
 
 .container {
-  margin: 0 auto;
-  width: 100%; }
+  width: 95%;
+  margin: 0 auto; }
 
 .header {
-  padding: 3rem;
   position: relative;
   background-image: linear-gradient(to right bottom, white, green), url(photos/background/header.jpg);
   height: 95vh;
@@ -35,16 +34,75 @@
     .header-primary:hover .header-primary-main {
       transform: skewX(-20deg) skewY(0deg); }
 
+.navigation {
+  position: relative; }
+  .navigation-checkbox {
+    display: none; }
+  .navigation-btn {
+    transition: all .2s;
+    position: fixed;
+    display: block;
+    width: 60px;
+    border-radius: 50%;
+    height: 60px;
+    right: 32px;
+    border: 2px dashed black;
+    background-color: red;
+    z-index: 999;
+    top: 1.1rem; }
+    .navigation-btn-bar {
+      transition: all .3s;
+      position: absolute;
+      width: 1.5rem;
+      transform: translate(-50%, -50%);
+      display: block;
+      height: 3px;
+      top: 50%;
+      left: 50%;
+      background-color: black; }
+      .navigation-btn-bar::after, .navigation-btn-bar::before {
+        content: "";
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: 3px;
+        background-color: black; }
+      .navigation-btn-bar::after {
+        top: 8px; }
+      .navigation-btn-bar::before {
+        top: -8px; }
+    .navigation-btn:hover .navigation-btn-bar::before {
+      top: -0.6rem; }
+    .navigation-btn:hover .navigation-btn-bar::after {
+      top: 0.6rem; }
+  .navigation-checkbox:checked ~ .navigation-btn {
+    transform: scale(2); }
+
 .people-section {
-  padding: 2.3rem;
+  margin: 0 auto;
+  width: 70%;
+  padding: 6rem;
+  position: relative;
   background-image: linear-gradient(to right bottom, grey, white);
   transform: skewX(-6deg); }
   .people-section > * {
     transform: skewX(6deg); }
 
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.2;
+  z-index: -1; }
+  .bg-video-content {
+    object-fit: cover;
+    width: 100%;
+    height: 100%; }
+
 .card-people {
   perspective: 800px;
-  position: relative;
   height: 25rem;
   border: 1px solid black; }
   .card-people-img {
@@ -72,6 +130,14 @@
     transform: rotateY(180deg); }
   .card-people:hover .card-people-side--back {
     transform: rotateY(0deg); }
+
+.col {
+  float: left; }
+
+.row::after {
+  clear: both;
+  content: "";
+  display: block; }
 
 .s3 {
   width: calc((100% - 3*1rem)/4) !important; }
