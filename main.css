@@ -35,7 +35,8 @@
       transform: skewX(-20deg) skewY(0deg); }
 
 .navigation {
-  position: relative; }
+  position: absolute;
+  top: 0; }
   .navigation-checkbox {
     display: none; }
   .navigation-btn {
@@ -71,12 +72,52 @@
         top: 8px; }
       .navigation-btn-bar::before {
         top: -8px; }
+    .navigation-btn:active {
+      transform: skewX(30deg); }
     .navigation-btn:hover .navigation-btn-bar::before {
       top: -0.6rem; }
     .navigation-btn:hover .navigation-btn-bar::after {
       top: 0.6rem; }
-  .navigation-checkbox:checked ~ .navigation-btn {
-    transform: scale(2); }
+  .navigation-checkbox:checked ~ .navigation-bg {
+    transform: scale(50); }
+  .navigation-checkbox:checked ~ .navigation-menu {
+    width: 100%;
+    height: 100%;
+    opacity: 1; }
+  .navigation-bg {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-image: radial-gradient(#bfff00, #80ff00, #00ff40);
+    z-index: 888;
+    transition: all .2s;
+    position: fixed;
+    display: block;
+    top: 1.1rem;
+    right: 32px; }
+  .navigation-menu {
+    position: fixed;
+    z-index: 930;
+    width: 0px;
+    height: 100%;
+    opacity: 0;
+    transition: all .2s; }
+    .navigation-menu-list {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      z-index: 9999;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      list-style-type: none; }
+      .navigation-menu-list-item {
+        font-size: 3rem;
+        display: block;
+        padding: 0 3rem;
+        border: 1px solid black; }
+        .navigation-menu-list-item-link {
+          margin: 0px;
+          display: inline-block; }
 
 .people-section {
   margin: 0 auto;

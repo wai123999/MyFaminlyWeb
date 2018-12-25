@@ -16,14 +16,21 @@
 
 <body>
   <div class="container">
-		<button onclick="test()">TEst</button>
     <div class="navigation">
       <input type="checkbox"
       class="navigation-checkbox" id="navigation-checkbox">
       <label for="navigation-checkbox" class="navigation-btn">
-
-        <span class="navigation-btn-bar">&nbsp;</span>
+        <span class="navigation-btn-bar"></span>
       </label>
+      <div class="navigation-bg">
+      </div>
+      <nav class="navigation-menu">
+            <ul class="navigation-menu-list">
+              <li class="navigation-menu-list-item"><a href="#" class="navigation-menu-list-item-link">Home</a></li>
+                <li class="navigation-menu-list-item"><a href="#" class="navigation-menu-list-item-link">About</a></li>
+                <li class="navigation-menu-list-item"><a href="#" class="navigation-menu-list-item-link">End</a></li>
+            </ul>
+      </nav>
     </div>
     <header class="header">
       <div class="bg-video">
@@ -92,13 +99,6 @@
       </section>
     </main>
   </div>
-				<script>
-							function test()
-							{
-                console.log("something click");
-							  $.get("https://98.142.137.195:5111/api/?message=%E4%BD%A0%E5%A5%BD",function(data){console.log(data);});
-							}
-				</script>
 </body>
 
 </html>
