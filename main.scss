@@ -114,7 +114,7 @@ $gutter : 1rem;
   }
   &-checkbox:checked ~ &-bg
   {
-    transform:scale(50);
+    transform:scale(90);
   }
   &-checkbox:checked ~ &-menu
   {
@@ -282,4 +282,79 @@ $gutter : 1rem;
 .s3
 {
   width:calc((100% - 3*#{$gutter})/4) !important;
+}
+
+
+.outer-square
+{
+  position:absolute;
+  padding:0px;
+  margin:0px;
+  top:10%;
+  left:10%;
+  z-index:8000;
+}
+.inner-square
+{
+  padding:0px;
+  margin-left:24px;
+  margin-top:9px;
+  border-radius:15px;
+  border:1px solid black;
+
+  //margin-top:10px;
+
+   &-1
+   {
+     animation:movearound 5s infinite alternate;
+
+      border:1px solid black;
+      width:200px;
+
+      height:200px;
+   }
+   &-2
+   {
+     animation:movearound 5s infinite alternate;
+
+      border:1px solid black;
+      width:150px;
+      height:150px;
+   }
+   &-3
+   {
+     animation:movearound 5s infinite alternate;
+
+      border:1px solid black;
+      width:100px;
+      height:100px;
+   }
+   &-4
+   {
+     animation:movearound 5s infinite alternate;
+
+      border:1px solid black;
+      width:50px;
+      height:50px;
+   }
+
+}
+
+@keyframes movearound
+{
+  from {
+      transform:rotate(0deg);
+  }
+  to {
+    transform:rotate(360deg);
+  }
+}
+@-webkit-keyframes movearound
+{
+  from {
+      transform:rotate(0deg);
+  }
+  to {
+    transform:rotate(360deg);
+  }
 }
