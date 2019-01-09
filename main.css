@@ -286,5 +286,32 @@
     transform: rotate(360deg);
   }
 }
+.grid {
+  margin: 0 auto;
+  margin-top: 3rem;
+  width: 500px;
+  padding: 10px;
+  height: 500px;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  background-color: red;
+  grid-gap: 10px;
+}
+.grid-item {
+  transition: all 1s;
+  background-size: cover;
+  background-image: linear-gradient(to right bottom, rgba(0, 255, 0, 0), lime), url(photos/fruits/apple.jpg);
+  background-blend-mode: darken;
+}
+.grid-item:hover {
+  background-color: red;
+}
+.grid-item-8 {
+  grid-area: 4/2/4/4;
+}
+.grid-item-12 {
+  grid-area: 2/2/4/4;
+}
 
 /*# sourceMappingURL=main.css.map */
